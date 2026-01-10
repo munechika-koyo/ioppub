@@ -1,0 +1,4 @@
+justfile
+.typstignore
+./scripts/
+.DS_Store
