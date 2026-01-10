@@ -137,7 +137,7 @@
 ) = {
   show par: block.with(below: 0em)
   v(0.75em)
-  par(text(font: "Carlito", size: 24pt, weight: "bold", title))
+  par(leading: 1.5em, text(font: "Carlito", size: 24pt, weight: "bold", title))
   v(1.8em)
   make-authors(authors)
   v(1.25em)
