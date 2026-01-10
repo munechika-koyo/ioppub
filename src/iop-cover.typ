@@ -21,8 +21,7 @@
   // Keywords
   if keywords.len() > 0 {
     set text(size: 10pt)
-    set block(width: 76%)
-    [Keywords: #keywords.join(", ")]
+    block(width: 76%)[Keywords: #keywords.join(", ")]
   }
 
   line(length: 100%, stroke: 0.5pt)
