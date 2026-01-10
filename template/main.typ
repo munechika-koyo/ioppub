@@ -83,7 +83,7 @@ Equation @eq:intro1 shows an example of an equation in the introduction @a2020.
     [Data Row 1], [1.0], [1.5], [2.0],
     [Data Row 2], [2.0], [2.5], [3.0],
     [Data Row 3], [3.0], [3.5], [4.0],
-    table.hline(stroke: 0.7pt),
+    table.hline(),
   ),
   caption: [All tables must have a caption. Provide a short description of the table, including the key points illustrated by the data.],
 ) <tab:table1>

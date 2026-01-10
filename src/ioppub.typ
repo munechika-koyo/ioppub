@@ -26,10 +26,6 @@
   // Math
   show: equate.with(breakable: true, sub-numbering: true)
   set math.equation(numbering: (..n) => text(font: new-journal.font.text, numbering("(1a)", ..n)), supplement: none)
-
-  let pad-val = if journal.numcol == 1 { 2em } else { 0em }
-  // show math.equation.where(block: true): set align(left)
-  // show math.equation.where(block: true): pad.with(left: pad-val)
   show math.equation: set text(font: new-journal.font.math)
 
   // Links styling
@@ -51,7 +47,7 @@
   show figure.where(kind: table): set figure.caption(position: top)
   show table: set table(stroke: (x, y) => {
     if y == 0 {
-      (top: 0.7pt + black, bottom: 0.7pt + black)
+      (top: 1pt + black, bottom: 0.7pt + black)
     }
   })
 

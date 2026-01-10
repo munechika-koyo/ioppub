@@ -186,10 +186,11 @@
     h(1fr)
     [#link(doi)]
   } else {
+    set text(size: 9pt, font: "Carlito")
     grid(
       columns: (1fr, 1fr),
       align: (left, right),
-      text(size: 9pt, font: "Carlito")[#journal-header], [#authors-header],
+      [#journal-header], [#authors-header],
     )
     v(-0.8em)
     [#line(length: 100%, stroke: 0.5pt)]
@@ -200,14 +201,15 @@
   paper-info,
   journal,
 ) = context if counter(page).get().first() == 1 {
+  set text(font: "Carlito")
   grid(
     columns: (1fr, 1fr, 1fr),
     align: (left, center, right),
-    text(size: 8pt, font: "Carlito")[#if paper-info.issn != none {
+    text(size: 8pt)[#if paper-info.issn != none {
       "xxxx-xxxx/xx/xxxxxx"
     }],
-    text(size: 7pt, font: "Carlito")[#counter(page).get().first()],
-    text(size: 8pt, font: "Carlito", journal.foot-info),
+    text(size: 7pt)[#counter(page).get().first()],
+    text(size: 8pt, journal.foot-info),
   )
 } else {
   align(center)[#text(size: 7pt, font: "Carlito")[#counter(page).get().first()]]
