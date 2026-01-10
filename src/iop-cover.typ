@@ -140,6 +140,7 @@
   v(1.8em)
   make-authors(authors)
   v(1.25em)
+  set block(width: 76%)
   make-institutions(institutions)
   make-corresponding-note(authors)
   make-email(authors)
