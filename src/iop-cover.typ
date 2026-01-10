@@ -39,7 +39,6 @@
 
 #let make-institutions(institutions) = par({
   set text(size: 9pt)
-  set block(width: 76%)
   for (key, value) in institutions {
     make-institution(key, value)
     linebreak()
