@@ -1,6 +1,6 @@
 #let default-font = (
   text: ("STIX Two Text", "Times New Roman", "Charis SIL", "New Computer Modern"),
-  header: ("Carlito", "New Computer Modern"),
+  header: ("Carlito", "Arial", "New Computer Modern"),
   math: ("XITS Math", "STIX Two Math", "New Computer Modern Math"),
   homepage: ("Roboto", "New Computer Modern"),
 )
