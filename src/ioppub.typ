@@ -38,12 +38,13 @@
   // Figures and Tables
   show figure.where(kind: image): set figure(placement: top)
   show figure: set figure.caption(separator: ". ")
-  show figure.caption: c => align(left)[
+  show figure.caption: c => align(center, block[
+    #set align(left)
     #par(justify: false, [#text(
         font: journal.font.header,
         [*#c.supplement #c.counter.display(c.numbering)#c.separator*],
       )#c.body])
-  ]
+  ])
   show figure.where(kind: table): set figure.caption(position: top)
   show table: set table(stroke: (x, y) => {
     if y == 0 {
