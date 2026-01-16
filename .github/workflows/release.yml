@@ -24,7 +24,7 @@ jobs:
         run: |
           VERSION=${{ steps.get_version.outputs.VERSION }}
           echo "Extracting changelog for version $VERSION"
-          
+
           # Extract the changelog section for this version
           awk -v version="$VERSION" '
             /^## \[/ {
@@ -37,7 +37,7 @@ jobs:
             found && /^## \[/ { exit }
             found { print }
           ' CHANGELOG.md > release_notes.txt
-          
+
           echo "Release notes:"
           cat release_notes.txt
 
