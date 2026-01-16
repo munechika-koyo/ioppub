@@ -4,7 +4,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen)](https://github.com/munechika-koyo/ioppub/blob/main/LICENSE)
 <!-- [![User Manual](https://img.shields.io/badge/doc-.pdf-mediumpurple)](https://github.com/munechika-koyo/ioppub/blob/main/docs/manual.pdf) -->
 
-The `ioppub` package is designed to closely resemble the manuscript used by IOP Publishing for article formatting, which is not publicly available.
+The `ioppub` package is designed to closely resemble the manuscript used by IOP Publishing for article formatting.
 It is not intended for submission, but rather to help authors prepare articles that resemble the final published version.
 It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
 
