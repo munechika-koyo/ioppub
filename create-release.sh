@@ -57,4 +57,9 @@ git push origin "$TAG"
 echo ""
 echo "✅ Tag ${TAG} created and pushed successfully!"
 echo "The GitHub Actions workflow will automatically create the release."
-echo "Monitor the workflow at: https://github.com/munechika-koyo/ioppub/actions"
+
+# Extract GitHub URL from git remote
+REPO_URL=$(git config --get remote.origin.url | sed 's/\.git$//')
+# Convert SSH URL to HTTPS if needed
+REPO_URL=$(echo "$REPO_URL" | sed 's/^git@github\.com:/https:\/\/github.com\//')
+echo "Monitor the workflow at: ${REPO_URL}/actions"
