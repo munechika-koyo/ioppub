@@ -8,6 +8,8 @@ The release process is automated using GitHub Actions. When you push a tag with 
 
 ## Creating a Release
 
+**Important:** Releases should be created from the `main` branch. Ensure all changes are merged to `main` before creating a release.
+
 ### 1. Update the Version
 
 Before creating a release, ensure the version is updated in the following files:
@@ -55,7 +57,13 @@ git push
 
 ### 4. Create and Push Tag
 
-Create a git tag for the release:
+You can use the provided script to create and push a tag:
+
+```bash
+./create-release.sh X.Y.Z
+```
+
+Or manually create a git tag for the release:
 
 ```bash
 git tag -a vX.Y.Z -m "Release vX.Y.Z"
