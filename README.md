@@ -1,6 +1,6 @@
 # IOP Publishing article template
 
-[![Typst Package](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2FMc-Zen%2Fzero%2Fv0.6.1%2Ftypst.toml&query=%24.package.version&prefix=v&logo=typst&label=package&color=239DAD)](https://typst.app/universe/package/ioppub)
+[![Typst Package](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2Fmunechika-koyo%2Fioppub%2Frefs%2Ftags%2Fv0.1.1%2Ftypst.toml&query=package.version&prefix=v&logo=typst&label=package&color=239DAD)](https://typst.app/universe/package/ioppub)
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen)](https://github.com/munechika-koyo/ioppub/blob/v0.1.1/LICENSE)
 
 <!-- [![User Manual](https://img.shields.io/badge/doc-.pdf-mediumpurple)](https://github.com/munechika-koyo/ioppub/blob/main/docs/manual.pdf) -->
