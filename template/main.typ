@@ -1,4 +1,4 @@
-#import "@preview/ioppub:0.1.0": *
+#import "@preview/ioppub:0.1.1": *
 
 #show: ioppub.with(
   title: "Article Title",
