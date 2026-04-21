@@ -2,7 +2,7 @@
 
 // Appendix
 #let appendix(body) = {
-  set heading(numbering: "A.1.", supplement: [Appendix])
+  set heading(numbering: (..n) => [Appendix ] + numbering("A.1.", ..n), supplement: [Appendix])
   // Reset heading counter
   counter(heading).update(0)
 

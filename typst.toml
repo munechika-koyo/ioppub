@@ -1,6 +1,6 @@
 [package]
 name = "ioppub"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Koyo Munechika"]
 license = "MIT"
 description = "IOP Publishing article template for Typst"
