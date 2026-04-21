@@ -1,6 +1,6 @@
 # IOP Publishing article template
 
-[![Generic badge](https://img.shields.io/badge/Version-0.1.0-cornflowerblue.svg)]()
+[![Typst Package](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2FMc-Zen%2Fzero%2Fv0.6.1%2Ftypst.toml&query=%24.package.version&prefix=v&logo=typst&label=package&color=239DAD)](https://typst.app/universe/package/ioppub)
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen)](https://github.com/munechika-koyo/ioppub/blob/main/LICENSE)
 <!-- [![User Manual](https://img.shields.io/badge/doc-.pdf-mediumpurple)](https://github.com/munechika-koyo/ioppub/blob/main/docs/manual.pdf) -->
 
@@ -15,14 +15,14 @@ This section provides the minimal amount of information to get started with the 
 To use the `ioppub` template, you need to include the following line at the beginning of your `typ` file:
 
 ```typ
-#import "@preview/ioppub:0.1.0": *
+#import "@preview/ioppub:0.1.1": *
 ```
 
 ### Initializing the template
 
 After importing `ioppub`, you have to initialize the template by a show rule with the `#ioppub()` command. This function takes an optional argument to specify the title of the document.
 
-* `journal`: Dictionary containing the journal information (e.g. `psst`).
+* `journal`: Dictionary containing the journal information (e.g. `psst`, `ppcf`, etc.).
 * `title`: Title of the paper.
 * `abstract`: Abstract of the paper.
 * `authors`: List of the authors of the paper.
