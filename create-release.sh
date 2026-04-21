@@ -11,6 +11,11 @@ if [ $# -ne 1 ]; then
 fi
 
 VERSION=$1
+if [[ ! "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+    echo "Error: Version must be in SemVer format X.Y.Z"
+    echo "Example: $0 0.1.0"
+    exit 1
+fi
 TAG="v${VERSION}"
 
 echo "Creating release ${TAG}..."
