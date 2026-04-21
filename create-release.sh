@@ -26,6 +26,27 @@ if [ "$CURRENT_BRANCH" != "main" ]; then
     fi
 fi
 
+# Ensure working tree is clean before tagging a release
+if ! git diff --quiet || ! git diff --cached --quiet; then
+    echo "Error: Working tree has uncommitted changes"
+    echo "Please commit or stash all changes before creating a release tag"
+    exit 1
+fi
+
+# Ensure local main is up to date with origin/main before tagging
+if [ "$CURRENT_BRANCH" = "main" ]; then
+    git fetch origin main >/dev/null 2>&1
+    LOCAL_MAIN=$(git rev-parse HEAD)
+    REMOTE_MAIN=$(git rev-parse origin/main)
+    if [ "$LOCAL_MAIN" != "$REMOTE_MAIN" ]; then
+        echo "Warning: Local main is not up to date with origin/main"
+        read -p "Continue anyway? (y/N) " -n 1 -r
+        echo
+        if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+            exit 1
+        fi
+    fi
+fi
 # Check if tag already exists
 if git rev-parse "$TAG" >/dev/null 2>&1; then
     echo "Error: Tag ${TAG} already exists"
