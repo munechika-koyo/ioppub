@@ -47,12 +47,17 @@ if [ "$CURRENT_BRANCH" = "main" ]; then
         fi
     fi
 fi
-# Check if tag already exists
+# Check if tag already exists locally
 if git rev-parse "$TAG" >/dev/null 2>&1; then
-    echo "Error: Tag ${TAG} already exists"
+    echo "Error: Tag ${TAG} already exists locally"
     exit 1
 fi
 
+# Check if tag already exists on origin
+if git ls-remote --tags --exit-code origin "refs/tags/${TAG}" >/dev/null 2>&1; then
+    echo "Error: Tag ${TAG} already exists on origin"
+    exit 1
+fi
 # Check if CHANGELOG has entry for this version
 if ! grep -q "## \[${VERSION}\]" CHANGELOG.md; then
     echo "Error: CHANGELOG.md does not contain entry for version ${VERSION}"
