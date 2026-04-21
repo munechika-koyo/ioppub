@@ -53,7 +53,7 @@ if [ "$CURRENT_BRANCH" = "main" ]; then
     fi
 fi
 # Check if tag already exists locally
-if git rev-parse "$TAG" >/dev/null 2>&1; then
+if git show-ref --tags --verify --quiet "refs/tags/$TAG"; then
     echo "Error: Tag ${TAG} already exists locally"
     exit 1
 fi
