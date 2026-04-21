@@ -40,6 +40,10 @@ jobs:
             found { print }
           ' CHANGELOG.md > release_notes.txt
 
+          if [ ! -s release_notes.txt ]; then
+            echo "Error: No changelog entry found for version $VERSION" >&2
+            exit 1
+          fi
           echo "Release notes:"
           cat release_notes.txt
 
